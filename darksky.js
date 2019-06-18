@@ -40,12 +40,3 @@ $(document).ready(initializeApp);
             dataType: 'jsonp',
             success: handleDataReceived  
         }
-Collapse
-
-
-
-
-Message Input
-
-
-Message Raul Jauregui, Brady Greco, Kyle Apostol
