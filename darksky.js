@@ -7,7 +7,6 @@ class DarkSkyObject{
             success: this.handleDataReceived  
         }
         $.ajax(this.weatherInfo);
-        // this.handleDataReceived = this.handleDataReceived.bind(this);
     }
         handleDataReceived(response) { //server response to the client
             // debugger;
@@ -25,3 +24,4 @@ class DarkSkyObject{
         }
 }
 new DarkSkyObject;
+

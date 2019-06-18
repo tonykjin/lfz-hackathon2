@@ -17,12 +17,15 @@ function randomQuote() {
             $("#createQuote").html("<p id='createQuote' class='lead text-center'>" +
                 response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
 
-            $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
+            var text = $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText+
                 ' (' + response.quoteAuthor + ')');
+            console.log('this is text: ', text);
+            
+            console.log('response.quoteText: ', response.quoteText);
         }
     });
 }
-console.log($.ajax);
+console.log('this', $.ajax);
 $(function() {
     randomQuote();
 });
