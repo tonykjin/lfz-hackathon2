@@ -19,6 +19,7 @@ class Quote {
                 $("#createQuote").html("<p id='createQuote' class='lead text-center'>" +
                     response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
 
+
                 $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
                     ' (' + response.quoteAuthor + ')');
             }
