@@ -7,6 +7,7 @@
     <script src="darksky.js"></script>
     <script src="quote.js"></script>
     <script src="youtube.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 </head>
 <body background = 'sunset.png'>
     <div class="MainPage">
@@ -14,8 +15,7 @@
         <div class='weather_Section'> [WEATHER SECTION] </div>
         <div class='Music_Section'> [Music of the day]</div>
         <div class='Daily_quote'> [Daily Quote]</div>
-        <input onclick="responsiveVoice.speak();" type="button" value="Play" />
+        <input onclick="responsiveVoice.speak(response.quote);" type="button" value="Play" />
     </div>
 </body>
-    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 </html>

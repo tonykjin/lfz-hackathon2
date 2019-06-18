@@ -1,11 +1,12 @@
 $(document).ready(initializeApp);
 
 function initializeApp() {
-    $(".btn-success").click(function(){
+    $("input").click(function(){
         randomQuote();
     });
 
 }
+var quote = 'null';
 function randomQuote() {
     $.ajax
     ({
@@ -19,9 +20,11 @@ function randomQuote() {
 
             var text = $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText+
                 ' (' + response.quoteAuthor + ')');
+            quote = response.text; 
             console.log('this is text: ', text);
-            
             console.log('response.quoteText: ', response.quoteText);
+            $('.Daily_quote').append(response.quoteText);
+            
         }
     });
 }
