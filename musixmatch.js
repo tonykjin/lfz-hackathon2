@@ -3,7 +3,7 @@ class MusixMatch {
         this.initClient = this.initClient.bind(this);
     }
     initClient() {
-        const getGenre = 'https://api.musixmatch.com/ws/1.1/music.genre.get'
+        var getGenre = 'https://api.musixmatch.com/ws/1.1/music.genre.get'
         ajaxYoutubeData = {
             datatype: "json",
             url: getGenre,
@@ -13,6 +13,7 @@ class MusixMatch {
             },
             success: function( response ) {
                 console.log(response);
+                var musicGenre = response['message']['body']['music_genre_list']['music_genre'];
             },
             error: function( response ) { console.log(response)},
         }
